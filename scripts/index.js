@@ -8,7 +8,7 @@ function addTask() {
     if (taskInputDate.value != "" && taskInputDate !=  "") {
         const ul = document.getElementById("task-list");
         const li = document.createElement("li");
-        li.textContent = `Task: ${taskTitle} At: ${taskDate}` ;
+        li.textContent = `Task:  ${taskTitle}     •      At: ${taskDate}` ;
 
         const delButton = document.createElement("button");
         delButton.textContent = "X";
