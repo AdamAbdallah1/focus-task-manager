@@ -128,7 +128,7 @@ body {
 }
 
 .task-input button {
-    background-color: #007bff;
+    background-color: black;
     color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -145,8 +145,8 @@ body {
 }
 
 .task-input button:hover {
-    background-color: #0056b3;
-    color: whitesmoke;
+    background-color: rgb(207, 207, 207);
+    color: black;
 }
 
 .task-item {
@@ -160,15 +160,16 @@ body {
 }
   
   .del-button {
-    color: blue;
+    color: black;
     background: transparent;
     border: none;
     font-size: 18px;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 8px;
   }
   
   .del-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(48, 47, 47);
     color: whitesmoke;
   }
