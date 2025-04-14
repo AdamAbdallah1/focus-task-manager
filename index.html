@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
     <title>Focus - Task Manager</title>
 </head>
 <body>
@@ -13,6 +12,13 @@
         <div class="task">
             <section class="task-header">
                 <img class="task-header-logo" src="assets/focus-logo.svg" alt="focus incon logo" width="150">
+            </section>
+            <section class="task-body">
+                <section class="task-input">
+                    <label class="task-input task-input-title" for="task-input-title"><p>Task Title:</p><input class="task-input task-input-title" type="text" placeholder="Enter task title"></label>
+                    <label class="task-input task-input-date" for="task-input-date"><p>Task Date:</p><input type="datetime-local" name="task-input task-input-date" id="task-input-date"></label>
+                    <button onclick="addTask()" type="submit">Add Task</button>
+                </section>
             </section>
         </div>
     </main>
