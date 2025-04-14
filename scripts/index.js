@@ -1,3 +1,5 @@
+window.addEventListener("load", loadTasks);
+
 function addTask() {
     const taskInputTitle = document.getElementById("task-input-title");
     const taskTitle = taskInputTitle.value;
@@ -5,29 +7,48 @@ function addTask() {
     const taskInputDate = document.getElementById("task-input-date");
     const taskDate = taskInputDate.value;
 
-    if (taskInputDate.value != "" && taskInputDate !=  "") {
-        const ul = document.getElementById("task-list");
-        const li = document.createElement("li");
-        li.textContent = `Task:  ${taskTitle}     •      At: ${taskDate}` ;
+    if (taskInputTitle.value != "" && taskInputDate !=  "") {
+        const task = {
+            title: taskTitle,
+            date: taskDate
+        };
+        
+        const tasks = getTasksFromStorage();
+        tasks.push(task);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
 
-        const delButton = document.createElement("button");
-        delButton.textContent = "X";
-        delButton.id = "del-button";
-        delButton.classList = "del-button";
-        delButton.style.cursor = "pointer";
-        delButton.style.marginLeft = "165px";
-        delButton.style.border = "none";
-        delButton.style.fontSize = "18px";
-        delButton.style.color = "blue";
-
-        delButton.addEventListener("click", () => {
-            ul.removeChild(li);
-        });
-
-        li.appendChild(delButton);
-        ul.append(li);
+        displayTask(task);
 
         taskInputTitle.value = "";
         taskInputDate.value = "";
     }
 }
+
+function displayTask(task) {
+    const ul = document.getElementById("task-list");
+
+    const li = document.createElement("li");
+    li.classList.add("task-item");
+
+    const taskText = document.createElement("span");
+    taskText.textContent = `Task: ${task.title}  At: ${task.date}`;
+
+    const delButton = document.createElement("button");
+    delButton.textContent = "X";
+    delButton.classList.add("del-button");
+
+    delButton.addEventListener("click", () => {
+        ul.removeChild(li);
+        deleteTask(task);
+    });
+
+    li.appendChild(taskText);
+    li.appendChild(delButton);
+    ul.appendChild(li);
+}
+
+function getTasksFromStorage() {
+    const tasks = localStorage.getItem("tasks");
+    return tasks ? JSON.parse(tasks) : [];
+}
+
