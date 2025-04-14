@@ -28,4 +28,34 @@ body {
     .task-header img {
         margin-top: -25px;
     }
+
+    .task-input {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .task-input p{
+        font-family: 'Manrope', sans-serif;
+    }
+
+    .task-input-date {
+        font-family: 'Manrope', sans-serif;
+    }
+
+    .task-input button {
+        background-color: rgb(73, 156, 184);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600; /* or 500 */
+        letter-spacing: 0.5px;
+
+        border-radius: 6px;
+        width: 100px;
+        height: 30px;
+    }
+
+
 }
