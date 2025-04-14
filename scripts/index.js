@@ -5,12 +5,13 @@ function addTask() {
     const taskInputDate = document.getElementById("task-input-date");
     const taskDate = taskInputDate.value;
 
-    const ul = document.getElementById("task-list");
-    const li = document.createElement("li");
-    li.textContent = `Task: ${taskTitle} At: ${taskDate}`;
-    ul.appendChild(li);
+    if (taskInputDate.value != "" && taskInputDate !=  "") {
+        const ul = document.getElementById("task-list");
+        const li = document.createElement("li");
+        li.textContent = `Task: ${taskTitle} At: ${taskDate}`;
+        ul.appendChild(li);
 
-    taskInputTitle.value = "";
-    taskInputDate.value = "";
-
+        taskInputTitle.value = "";
+        taskInputDate.value = "";
+    }
 }
