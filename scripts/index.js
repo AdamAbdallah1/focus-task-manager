@@ -11,11 +11,14 @@ function addTask() {
         li.textContent = `Task: ${taskTitle} At: ${taskDate}` ;
 
         const delButton = document.createElement("button");
-        delButton.textContent = "❌";
+        delButton.textContent = "X";
         delButton.id = "del-button";
         delButton.classList = "del-button";
         delButton.style.cursor = "pointer";
-        delButton.style.marginLeft = "20px";
+        delButton.style.marginLeft = "165px";
+        delButton.style.border = "none";
+        delButton.style.fontSize = "18px";
+        delButton.style.color = "blue";
 
         delButton.addEventListener("click", () => {
             ul.removeChild(li);
