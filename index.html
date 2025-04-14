@@ -15,9 +15,12 @@
             </section>
             <section class="task-body">
                 <section class="task-input">
-                    <label class="task-input task-input-title" for="task-input-title"><p>Task Title:</p><input class="task-input task-input-title" type="text" placeholder="Enter task title"></label>
-                    <label class="task-input task-input-date" for="task-input-date"><p>Task Date:</p><input type="datetime-local" name="task-input task-input-date" id="task-input-date"></label>
+                    <label class="task-input" for="task-input-title"><p>Task Title:</p><input class="task-input task-input-title" type="text" placeholder="Enter task title"></label>
+                    <label class="task-input task-input-time" for="task-input-time"><p>Task Time:</p><input type="time" name="task-input task-input-date" id="task-input-date"></label>
                     <button onclick="addTask()" type="submit">Add Task</button>
+                </section>
+                <section class="tasks">
+                    <ul class="task-list"></ul>
                 </section>
             </section>
         </div>
