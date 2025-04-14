@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 
 @media (max-width: 480px) {
@@ -32,29 +32,42 @@ body {
     .task-input {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 10px;
         justify-content: center;
-        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .task-input p{
         font-family: 'Manrope', sans-serif;
+        font-weight: 700;
     }
 
-    .task-input-date {
-        font-family: 'Manrope', sans-serif;
+    .task-input-title {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-weight: 500;
     }
 
     .task-input button {
-        background-color: rgb(73, 156, 184);
-        color: white;
+        background-color: black;
+        color: whitesmoke;
         font-family: 'Poppins', sans-serif;
-        font-weight: 600; /* or 500 */
+        font-weight: 500;
         letter-spacing: 0.5px;
-
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 30px;
         border-radius: 6px;
         width: 100px;
         height: 30px;
+        cursor: pointer;
+    }
+
+    .task-input button:hover {
+        background-color: whitesmoke;
+        color: black;
     }
 
 
