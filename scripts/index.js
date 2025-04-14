@@ -52,3 +52,7 @@ function getTasksFromStorage() {
     return tasks ? JSON.parse(tasks) : [];
 }
 
+function loadTasks() {
+    const tasks = getTasksFromStorage();
+    tasks.forEach(task => displayTask(task));
+}
