@@ -56,3 +56,9 @@ function loadTasks() {
     const tasks = getTasksFromStorage();
     tasks.forEach(task => displayTask(task));
 }
+
+function deleteTask(taskToDelete) {
+    let tasks = getTasksFromStorage();
+    tasks = tasks.filter(task => !(task.title === taskToDelete.title && task.date === taskToDelete.date));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
