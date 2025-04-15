@@ -26,6 +26,9 @@ A minimal and responsive task management web app to help you stay focused and or
 
     Add your tasks, and they'll stay saved!
 
+    Or you can just visit: 
+    https://adamabdallah1.github.io/focus-task-manager/
+
 📄 License
 
 This project is open source and free to use.
