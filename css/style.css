@@ -71,6 +71,15 @@ body {
         color: whitesmoke;
     }
 
+    .task-checkbox {
+        margin-right: 10px;
+    }
+
+    .completed {
+        text-decoration: line-through;
+        color: #888;
+    }
+
     ul li {
         background-color: #F5F5F5;
         border-radius: 12px;
