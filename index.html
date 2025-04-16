@@ -9,26 +9,29 @@
 </head>
 <body>
     <main>
-        <div class="task">
-            <section class="task-header">
-                <img class="task-header-logo" src="assets/focus-logo.svg" alt="focus incon logo" width="130">
-            </section>
-            <section class="task-body">
-                <section class="task-input">
-                    <label class="task-input" for="task-input-title"><p>Task Title:</p><input id="task-input-title" class="task-input task-input-title" type="text" placeholder="Enter task title"></label>
-                    <label class="task-input task-input-time" for="task-input-time"><p>Task Time:</p><input class="task-input-date" type="time" name="task-input task-input-date" id="task-input-date"></label>
-                    <button onclick="addTask()" type="submit">Add Task</button>
+        <div class="wrapper">
+            <div class="task">
+                <section class="task-header">
+                    <img class="task-header-logo" src="assets/focus-logo.svg" alt="focus incon logo" width="130">
                 </section>
-                <section class="tasks">
-                    <ul id="task-list" class="task-list">
-                    </ul>
+                <section class="task-body">
+                    <section class="task-input">
+                        <label class="task-input" for="task-input-title"><p>Task Title:</p><input id="task-input-title" class="task-input task-input-title" type="text" placeholder="Enter task title"></label>
+                        <label class="task-input task-input-time" for="task-input-time"><p>Task Time:</p><input class="task-input-date" type="time" name="task-input task-input-date" id="task-input-date"></label>
+                        <button onclick="addTask()" type="submit">Add Task</button>
+                    </section>
+                    <section class="tasks">
+                        <ul id="task-list" class="task-list">
+                        </ul>
+                    </section>
                 </section>
-            </section>
+            </div>
+        
+            </main>
+            <footer>
+                <p>© 2025 Adam Abdallah. All rights reserved.</p>
+            </footer>
+            <script src="scripts/index.js"></script>
         </div>
-    </main>
-    <footer>
-        <p>© 2025 Adam Abdallah. All rights reserved.</p>
-    </footer>
-    <script src="scripts/index.js"></script>
 </body>
 </html>
