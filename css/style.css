@@ -104,7 +104,6 @@ body {
     flex: 1;
 }
 
-
 .task-header {
     display: flex;
     justify-content: center;
@@ -167,7 +166,7 @@ body {
     margin-top: 30px;
 }
   
-  .del-button {
+.del-button {
     color: black;
     background: transparent;
     border: none;
@@ -175,12 +174,22 @@ body {
     cursor: pointer;
     margin-top: 10px;
     border-radius: 8px;
-  }
+}
   
-  .del-button:hover {
+.del-button:hover {
     background-color: rgb(48, 47, 47);
     color: whitesmoke;
-  }
+}
+
+.task-checkbox {
+    margin-left: -30px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
 
 footer {
     background-color: black;
