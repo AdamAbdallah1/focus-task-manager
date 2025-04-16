@@ -173,3 +173,12 @@ body {
     background-color: rgb(48, 47, 47);
     color: whitesmoke;
   }
+
+footer {
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Manrope', sans-serif;
+}
