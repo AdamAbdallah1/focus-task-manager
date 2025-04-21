@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ));
 
         if (matchedUser) {
-            //console.log(matchedUser);
+            window.location.href = "../pages/home.html"
         } else {
             //console.log("Not found");
         }
