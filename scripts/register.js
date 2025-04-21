@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const regEmail = document.getElementById("email").value;
         const regPassword = document.getElementById("password").value;
 
-        console.log(`Account: ${regEmail} : ${regPassword}`);
+        //console.log(`Account: ${regEmail} : ${regPassword}`);
 
         const regUser = {
             username: regUsername,
