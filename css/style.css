@@ -1,23 +1,3 @@
-* {
-    margin: 0;
-}
-
-body {
-    background-color: rgb(219, 219, 219);
-}
-
-header {
-    width: 100%;
-    display: flex;
-    background-color: white;
-    height: 70px;
-}
-
-.task-header-logo{
-    margin: auto;
-    margin-top: -30px;
-}
-
 .container {
     display: flex;
     flex-direction: column;
