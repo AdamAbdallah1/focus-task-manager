@@ -122,18 +122,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: gray;
+    font-family: 'Manrope', sans-serif;
+    height: 10px;
+    margin-top: 50px;
 }
+
 
 .task-header a{
     text-decoration: none;
     color: gray;
     justify-content: center;
     align-items: center;
-    margin-top: -20px;
-}
-
-.task-header img {
-    margin-top: -25px;
 }
 
 .task-input {
@@ -143,17 +143,38 @@ body {
     justify-content: center;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
 }
+
 
 .task-input p{
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 200;
 }
 
 .task-input-title {
     margin-left: 5px;
     margin-right: 5px;
+    border: 1px solid black;
     font-weight: 500;
+}
+
+.task-input-title:hover {
+    background-color: black;
+    color: white;
+}
+
+.task-input-date {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.task-input-date:hover {
+    background-color: black;
+    color: white;
 }
 
 .task-input button {
