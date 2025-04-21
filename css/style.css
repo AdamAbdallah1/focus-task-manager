@@ -17,3 +17,37 @@ header {
     margin: auto;
     margin-top: -30px;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope';
+    margin-top: 150px;
+}
+
+.container h1 {
+    font-weight: 200;
+}
+
+.container h2 {
+    font-weight: 400;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.content button{
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
