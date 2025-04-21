@@ -7,17 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //console.log(`Account: ${regEmail} : ${regPassword}`);
 
-        const regUser = {
-            username: regUsername,
-            email: regEmail,
-            password: regPassword,
-            tasks: []
-        };
-
-        let users = JSON.parse(localStorage.getItem("users")) || [];
-        users.push(regUser);
-        localStorage.setItem("users", JSON.stringify(users));
-
-        window.location.href = "../pages/login.html";
+        if (regUsername && regEmail && regPassword) {
+            const regUser = {
+                username: regUsername,
+                email: regEmail,
+                password: regPassword,
+                tasks: []
+            };
+    
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            users.push(regUser);
+            localStorage.setItem("users", JSON.stringify(users));
+    
+            window.location.href = "../pages/login.html";
+        }
     })
 })
