@@ -25,10 +25,12 @@
     gap: 10px;
     justify-content: center;
     padding: 10px;
+    color: black;
 }
 
 .user-input-header p{
     font-size: 20px;
+    color: black;
 }
 
 .user-input-header img{
@@ -41,6 +43,12 @@
     background-color: white;
     padding: 10px;
     border-radius: 20px;
+    text-align: center;
+}
+
+.user-input input:hover {
+    background-color: black;
+    color: white;
 }
 
 .container button{
@@ -54,4 +62,15 @@
 .container button:hover {
     background-color: black;
     color: white;
+}
+
+.container a{
+    color: gray;
+    text-decoration: none;
+    font-family: 'Manrope';
+}
+
+.container p{
+    font-family: 'Manrope';
+
 }
