@@ -1,26 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     let curUser = JSON.parse(localStorage.getItem("curUser")) || [];
-    headerUser = document.getElementById("header-username");
+
+    if (!curUser || !curUser.email) {
+        alert("No user logged in.");
+        window.location.href = "../index.html";
+        return;
+    }
+
+    const headerUser = document.getElementById("header-username");
     headerUser.textContent = curUser.username;
 
-    addTaskBtn = document.getElementById("addTask");
-    addTaskBtn.addEventListener("click", () => {
-        taskTitle = document.getElementById("task-input-title").value;
-        taskDate = document.getElementById("task-input-date").value;
+    logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("curUser");
+        window.location.href = "../index.html";
+    })
 
-        tasks = {
+    if (!Array.isArray(curUser.tasks)) {
+        curUser.tasks = [];
+    } 
+
+    const ul = document.getElementById("task-list");
+    curUser.tasks.forEach(task => {
+        const li = document.createElement("li");
+        li.textContent = `${task.taskTitle} At ${task.taskDate}`;
+        li.classList.add("list-item");
+        ul.appendChild(li);
+    });
+
+    const addTaskBtn = document.getElementById("addTask");
+    addTaskBtn.addEventListener("click", () => {
+        const taskTitle = document.getElementById("task-input-title").value;
+        const taskDate = document.getElementById("task-input-date").value;
+
+        if (!taskTitle || !taskDate) {
+            alert("Please fill in both fields.");
+            return;
+        }
+
+        const newTask = {
             taskTitle: taskTitle,
             taskDate: taskDate
         };
 
-        curUser.tasks.push(tasks);
+        curUser.tasks.push(newTask);
 
-        //console.log(curUser);
+        localStorage.setItem("curUser", JSON.stringify(curUser));
 
-        ul = document.getElementById("task-list");
-        li = document.createElement("li");
-        li.textContent = `${tasks.taskTitle} At ${tasks.taskDate}`;
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users = users.map(user => user.email === curUser.email ? curUser : user);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        const li = document.createElement("li");
+        li.textContent = `${taskTitle} At ${taskDate}`;
         li.classList.add("list-item");
         ul.appendChild(li);
-    })
+
+        document.getElementById("task-input-title").value = '';
+        document.getElementById("task-input-date").value = '';
+
+    });
 });
