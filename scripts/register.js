@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const regUser = {
             username: regUsername,
             email: regEmail,
-            password: regPassword
+            password: regPassword,
+            tasks: []
         };
 
         let users = JSON.parse(localStorage.getItem("users")) || [];
