@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ));
 
         if (matchedUser) {
+            localStorage.setItem("curUser", JSON.stringify(matchedUser));
             window.location.href = "../pages/home.html"
         } else {
             //console.log("Not found");
