@@ -29,9 +29,8 @@ body {
         margin-top: -25px;
     }
 
-    .task-header a{
-        color: black;
-        text-decoration: none;
+    .task-header button{
+        background-color: white;
     }
 
     .task-input {
@@ -125,6 +124,18 @@ body {
     color: gray;
     justify-content: center;
     align-items: center;
+}
+
+.task-header button {
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: gray;
+}
+
+.task-header button:hover {
+    color: black;
 }
 
 .task-input {
