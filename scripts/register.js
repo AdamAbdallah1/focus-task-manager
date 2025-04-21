@@ -6,5 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const regPassword = document.getElementById("password").value;
 
         console.log(`Account: ${regEmail} : ${regPassword}`);
+
+        const regUser = {
+            username: regUsername,
+            email: regEmail,
+            password: regPassword
+        };
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(regUser);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        window.location.href = "../pages/login.html";
     })
 })
